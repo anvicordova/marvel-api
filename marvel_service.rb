@@ -4,9 +4,9 @@ require "json"
 require 'net/http'
 
 class MarvelService
-  def fetch(endpoint)
+  def fetch(endpoint, params = {})
     uri = URI.parse("http://gateway.marvel.com/v1/public/#{endpoint}")
-    uri.query = URI.encode_www_form(query_params)
+    uri.query = URI.encode_www_form(query_params.merge(params))
     JSON.parse(Net::HTTP.get_response(uri).body)
   end
 

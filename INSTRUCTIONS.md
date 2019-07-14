@@ -1,7 +1,12 @@
+# DEPENDENCIES
+Ruby 2.6.3
+
+# DEVELOPMENT SETUP
 1. Create a Marvel Account in [http://developer.marvel.com/docs]
 2. Generate a key
 3. `cp .env.example .env`
 4.  Add your public and private keys in the `.env` file
 5. `gem install bundler`
 6. `bundle install`
-7. In your terminal run `ruby start.rb`
+7. Run `ruby app.rb`
+8. In your browser, go to `http://localhost:4567/`

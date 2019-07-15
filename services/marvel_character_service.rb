@@ -1,6 +1,3 @@
-require_relative "marvel_service"
-require_relative "marvel_character"
-
 class MarvelCharacterService < MarvelService
 
   def find_by_name(name)

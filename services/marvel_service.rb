@@ -5,7 +5,7 @@ require "net/http"
 
 class MarvelService
   def fetch(endpoint, params = {})
-    uri = URI.parse("#{ENV["MARVEL_URL"]}#{endpoint}")
+    uri = URI.parse("#{ENV["MARVEL_URL"]}/#{endpoint}")
     uri.query = URI.encode_www_form(query_params.merge(params))
 
     JSON.parse(

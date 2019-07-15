@@ -1,11 +1,11 @@
 require "uri"
 require "digest"
 require "json"
-require 'net/http'
+require "net/http"
 
 class MarvelService
   def fetch(endpoint, params = {})
-    uri = URI.parse("http://gateway.marvel.com/v1/public/#{endpoint}")
+    uri = URI.parse("#{ENV["MARVEL_URL"]}#{endpoint}")
     uri.query = URI.encode_www_form(query_params.merge(params))
 
     JSON.parse(
@@ -21,12 +21,12 @@ class MarvelService
 
     {
       ts: timestamp,
-      apikey: ENV['MARVEL_PUBLIC_KEY'],
+      apikey: ENV["MARVEL_PUBLIC_KEY"],
       hash: generate_hash(timestamp)
     }
   end
 
   def generate_hash(timestamp)
-    Digest::MD5.hexdigest(timestamp + ENV['MARVEL_PRIVATE_KEY'] + ENV['MARVEL_PUBLIC_KEY'])
+    Digest::MD5.hexdigest(timestamp + ENV["MARVEL_PRIVATE_KEY"] + ENV["MARVEL_PUBLIC_KEY"])
   end
 end

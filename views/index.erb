@@ -1,14 +1,30 @@
-<h1><%= @story[:character].name %></h1>
-<p><%= @story[:character].description %></p>
-<ul>
-  <% @story[:stories].each do |story| %>
-    <li><%= story.title %></li>
-  <% end %>
-</ul>
-<ul>
-  <% @story[:characters].each do |character| %>
-    <li><%= character.id %></li>
-    <li><%= character.name %></li>
-    <li><%= character.description %></li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <div id="stories">
+      <h1><%= @story[:character].name %></h1>
+      <p><%= @story[:character].description %></p>
+      <ul>
+        <% @story[:stories].each do |story| %>
+          <li>
+            <img src=""><br>
+            <%= story.title %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div id="characters">
+      <ul>
+        <% @story[:characters].each do |character| %>
+          <li><%= character.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+
+</html>

@@ -8,5 +8,5 @@ Ruby 2.6.3
 4.  Add your public and private keys in the `.env` file
 5. `gem install bundler`
 6. `bundle install`
-7. In your terminal run `rackup -p 4567`
+7. In your terminal run `rerun 'rackup -p  4567'`
 8. In your browser, go to `http://localhost:4567`

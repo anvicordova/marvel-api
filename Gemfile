@@ -5,5 +5,6 @@ source "https://rubygems.org" do
   group :test do
     gem "rack-test"
     gem "rspec"
+    gem "rerun"
   end
 end

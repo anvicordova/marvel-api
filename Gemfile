@@ -5,6 +5,7 @@ source "https://rubygems.org" do
   group :test do
     gem "rack-test"
     gem "rspec"
+    gem "webmock"
     gem "rerun"
   end
 end

@@ -1,17 +1,25 @@
 require "rack/test"
 require "rspec"
+require "webmock/rspec"
 
 ENV["RACK_ENV"] = "test"
 
 require File.expand_path(File.join("config", "application"))
+require_relative "support/fake_marvel"
 
 module RSpecMixin
   include Rack::Test::Methods
   def app() described_class end
 end
 
+WebMock.disable_net_connect!(allow_localhost: true)
+
 RSpec.configure do |config|
   config.include RSpecMixin
+
+  config.before(:each) do
+    stub_request(:any, /gateway.marvel.com/).to_rack(FakeMarvel)
+  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

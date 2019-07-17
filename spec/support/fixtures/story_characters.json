@@ -1,0 +1,786 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2019 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2019 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2019 MARVEL</a>",
+  "etag": "0cea7756777e0f9b34ffb80bb9b1e56b99d09d84",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 2,
+    "count": 2,
+    "results": [
+      {
+        "id": 1011336,
+        "name": "New Mutants",
+        "description": "",
+        "modified": "2017-10-13T10:18:07-0400",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/8/e0/53ea47c1d41a6",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011336",
+        "comics": {
+          "available": 245,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011336/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23645",
+              "name": "Astonishing Tales (2009) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30346",
+              "name": "Cable (2008) #24"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/66188",
+              "name": "Cable (2017) #154"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/20946",
+              "name": "Cable Classic Vol. 1 (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/66190",
+              "name": "Color Your Own X-Men: The New Mutants (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/39443",
+              "name": "ESSENTIAL X-MEN VOL. 4 TPB (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/42400",
+              "name": "Exiled (2011) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64879",
+              "name": "Fallen Angels (1987) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64878",
+              "name": "Fallen Angels (1987) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64877",
+              "name": "Fallen Angels (1987) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64875",
+              "name": "Fallen Angels (1987) #5"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64874",
+              "name": "Fallen Angels (1987) #6"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64873",
+              "name": "Fallen Angels (1987) #7"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64872",
+              "name": "Fallen Angels (1987) #8"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/27443",
+              "name": "Golden Age Marvel Comics Omnibus Vol. 1 (Hardcover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/40566",
+              "name": "Journey Into Mystery (2011) #637"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/40552",
+              "name": "Journey Into Mystery (2011) #638"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/62185",
+              "name": "Loki: Journey into Mystery by Kieron Gillen (Hardcover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/71517",
+              "name": "Marvel Age Annual (1985) #4"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/19821",
+              "name": "Marvel Fanfare (1982) #45"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 45,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011336/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6792",
+              "name": "Astonishing Tales (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/4002",
+              "name": "Cable (2008 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/22386",
+              "name": "Cable (2017 - 2018)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/4059",
+              "name": "Cable Classic Vol. 1 (2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/24000",
+              "name": "Color Your Own X-Men: The New Mutants (2018)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14398",
+              "name": "ESSENTIAL X-MEN VOL. 4 TPB (2011 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/16139",
+              "name": "Exiled (2011 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23621",
+              "name": "Fallen Angels (1987)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8765",
+              "name": "Golden Age Marvel Comics Omnibus Vol. 1 (2009 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14764",
+              "name": "Journey Into Mystery (2011 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/22809",
+              "name": "Loki: Journey into Mystery by Kieron Gillen (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/26065",
+              "name": "Marvel Age Annual (1985 - 1988)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3719",
+              "name": "Marvel Fanfare (1982 - 1992)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8770",
+              "name": "Marvel Masterworks: The Inhumans Vol. 1 (2009 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8755",
+              "name": "Marvel Masterworks: The Inhumans Vol.1 (2009 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8771",
+              "name": "Marvel Super Hero Squad (2009 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/22492",
+              "name": "Marvel Team-Up Annual (1976 - 1978)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1595",
+              "name": "Marvel Visionaries: Chris Claremont (2005)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/563",
+              "name": "New Mutants (2003 - 2004)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7455",
+              "name": "New Mutants (2009 - 2012)"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 421,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011336/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/596",
+              "name": "New Mutants (2003) #8",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/597",
+              "name": "Interior #597",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1296",
+              "name": "New Mutants (2003) #5",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1297",
+              "name": "Interior #1297",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1596",
+              "name": "New Mutants (2003) #10",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1597",
+              "name": "Interior #1597",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1888",
+              "name": "New Mutants (2003) #9",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1889",
+              "name": "Interior #1889",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1901",
+              "name": "New Mutants (2003) #12",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1902",
+              "name": "Interior #1902",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1903",
+              "name": "New Mutants (2003) #13",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1904",
+              "name": "Interior #1904",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2079",
+              "name": "New Mutants (2003) #7",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2080",
+              "name": "Interior #2080",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2155",
+              "name": "New Mutants (2003) #11",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2156",
+              "name": "Interior #2156",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2533",
+              "name": "New Mutants (2003) #6",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/2534",
+              "name": "Interior #2534",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/3364",
+              "name": "Interior #3364",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/3365",
+              "name": "New X-Men (2004) #5",
+              "type": "cover"
+            }
+          ],
+          "returned": 20
+        },
+        "events": {
+          "available": 16,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011336/events",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+              "name": "Acts of Vengeance!"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+              "name": "Age of X"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/233",
+              "name": "Atlantis Attacks"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/240",
+              "name": "Days of Future Present"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/246",
+              "name": "Evolutionary War"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/248",
+              "name": "Fall of the Mutants"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+              "name": "Fear Itself"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/252",
+              "name": "Inferno"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/32",
+              "name": "Kings of Pain"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/263",
+              "name": "Mutant Massacre"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/270",
+              "name": "Secret Wars"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/271",
+              "name": "Secret Wars II"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/273",
+              "name": "Siege"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/308",
+              "name": "X-Men: Regenesis"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/279",
+              "name": "X-Men: Second Coming"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/280",
+              "name": "X-Tinction Agenda"
+            }
+          ],
+          "returned": 16
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1011336/new_mutants?utm_campaign=apiRef&utm_source=7cd29fcabbdca66ff951e7518380ef4c"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/New_Mutants?utm_campaign=apiRef&utm_source=7cd29fcabbdca66ff951e7518380ef4c"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011336/new_mutants?utm_campaign=apiRef&utm_source=7cd29fcabbdca66ff951e7518380ef4c"
+          }
+        ]
+      },
+      {
+        "id": 1009629,
+        "name": "Storm",
+        "description": "Ororo Monroe is the descendant of an ancient line of African priestesses, all of whom have white hair, blue eyes, and the potential to wield magic.",
+        "modified": "2016-05-26T11:50:27-0400",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/526963dad214d",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009629",
+        "comics": {
+          "available": 817,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009629/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/43498",
+              "name": "A+X (2012) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/17701",
+              "name": "Age of Apocalypse: The Chosen (1995) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/37996",
+              "name": "Age of X: Alpha (2010) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/12676",
+              "name": "Alpha Flight (1983) #17"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/12694",
+              "name": "Alpha Flight (1983) #33"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/12725",
+              "name": "Alpha Flight (1983) #61"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/12668",
+              "name": "Alpha Flight (1983) #127"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21511",
+              "name": "Astonishing X-Men (2004) #25"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21714",
+              "name": "Astonishing X-Men (2004) #26"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21941",
+              "name": "Astonishing X-Men (2004) #27"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23087",
+              "name": "Astonishing X-Men (2004) #28"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23937",
+              "name": "Astonishing X-Men (2004) #29"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24501",
+              "name": "Astonishing X-Men (2004) #30"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24503",
+              "name": "Astonishing X-Men (2004) #32"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24504",
+              "name": "Astonishing X-Men (2004) #33"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24505",
+              "name": "Astonishing X-Men (2004) #34"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30332",
+              "name": "Astonishing X-Men (2004) #35"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38318",
+              "name": "Astonishing X-Men (2004) #38"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38319",
+              "name": "Astonishing X-Men (2004) #40"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/39318",
+              "name": "Astonishing X-Men (2004) #44"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 204,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009629/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/16450",
+              "name": "A+X (2012 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3614",
+              "name": "Age of Apocalypse: The Chosen (1995)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13603",
+              "name": "Age of X: Alpha (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2116",
+              "name": "Alpha Flight (1983 - 1994)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/744",
+              "name": "Astonishing X-Men (2004 - 2013)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/354",
+              "name": "Avengers (1998 - 2004)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1991",
+              "name": "Avengers (1963 - 1996)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9085",
+              "name": "Avengers (2010 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1340",
+              "name": "Avengers Assemble (2004)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/15305",
+              "name": "Avengers Vs. X-Men (2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3626",
+              "name": "Bishop (1994 - 1995)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2115",
+              "name": "Black Panther (1998 - 2003)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/784",
+              "name": "Black Panther (2005 - 2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6804",
+              "name": "Black Panther (2008 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/20912",
+              "name": "Black Panther (2016 - 2018)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23017",
+              "name": "Black Panther and the Crew (2017 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3850",
+              "name": "Black Panther Annual (2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2226",
+              "name": "Black Panther: Civil War (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/15691",
+              "name": "Black Panther: The Man Without Fear (2010 - 2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9120",
+              "name": "Black Widow & the Marvel Girls (2009 - 2010)"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 950,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009629/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/497",
+              "name": "Interior #497",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/648",
+              "name": "1 of 2- Black Panther crossover",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/650",
+              "name": "2 of 2- Black Panther crossover",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/737",
+              "name": "2 of 5 - Savage Land",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/738",
+              "name": "Uncanny X-Men (1963) #457",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/739",
+              "name": "3 of 5 - Savage Land",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/742",
+              "name": "Uncanny X-Men (1963) #459",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/743",
+              "name": "5 of 5 - World's End",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/745",
+              "name": "1 of 2 - Mojo Rising",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/747",
+              "name": "2 of 2 - Mojo Rising",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/749",
+              "name": "1 of 4 - Season of the Witch",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/760",
+              "name": "Uncanny X-Men (1963) #467",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/761",
+              "name": "2 of 3 - Grey's End",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/765",
+              "name": "1 of 3 -",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/767",
+              "name": "2 of 3 - Wand'ring Star",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/768",
+              "name": "UNCANNY X-MEN (1963) #471",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/770",
+              "name": "UNCANNY X-MEN (1963) #472",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1420",
+              "name": "ULTIMATE X-MEN (2000) #43",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1422",
+              "name": "ULTIMATE X-MEN (2000) #44",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1426",
+              "name": "ULTIMATE X-MEN (2000) #49",
+              "type": "cover"
+            }
+          ],
+          "returned": 20
+        },
+        "events": {
+          "available": 30,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009629/events",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/116",
+              "name": "Acts of Vengeance!"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/227",
+              "name": "Age of Apocalypse"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+              "name": "Age of X"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/233",
+              "name": "Atlantis Attacks"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/310",
+              "name": "Avengers VS X-Men"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+              "name": "Civil War"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+              "name": "Dark Reign"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/240",
+              "name": "Days of Future Present"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/245",
+              "name": "Enemy of the State"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/246",
+              "name": "Evolutionary War"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/248",
+              "name": "Fall of the Mutants"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/249",
+              "name": "Fatal Attractions"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/251",
+              "name": "House of M"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/252",
+              "name": "Inferno"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/29",
+              "name": "Infinity War"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/334",
+              "name": "Inhumans Vs. X-Men"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/255",
+              "name": "Initiative"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/37",
+              "name": "Maximum Security"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/299",
+              "name": "Messiah CompleX"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/263",
+              "name": "Mutant Massacre"
+            }
+          ],
+          "returned": 20
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/characters/1009629/storm?utm_campaign=apiRef&utm_source=7cd29fcabbdca66ff951e7518380ef4c"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Storm?utm_campaign=apiRef&utm_source=7cd29fcabbdca66ff951e7518380ef4c"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009629/storm?utm_campaign=apiRef&utm_source=7cd29fcabbdca66ff951e7518380ef4c"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 class MarvelCharacter
-  attr_accessor :id, :name, :description, :number_of_stories
+  attr_accessor :id, :name, :description, :number_of_stories, :thumbnail_url
 
   def initialize(id:, name:, description:)
     self.id = id

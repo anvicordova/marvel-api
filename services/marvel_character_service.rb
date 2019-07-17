@@ -5,6 +5,7 @@ class MarvelCharacterService < MarvelService
 
     character = MarvelCharacter.new(character_hash.slice(:id, :name, :description))
     character.number_of_stories = character_hash[:stories][:available]
+    character.thumbnail_url = ThumbnailService.new.fetch(character_hash[:thumbnail])
     character
   end
 

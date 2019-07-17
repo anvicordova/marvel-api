@@ -5,6 +5,10 @@ class FakeMarvel < Sinatra::Base
     json_response 200, "characters.json"
   end
 
+  get "/v1/public/characters/:character_id/stories" do
+    json_response 200, "character_stories.json"
+  end
+
   def json_response(response_code, file_name)
     content_type :json
     status response_code

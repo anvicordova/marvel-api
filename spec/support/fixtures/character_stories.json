@@ -1,0 +1,86 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2019 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2019 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2019 MARVEL</a>",
+  "etag": "fa010e4c1dc45524a6b6664b2b8b5df76753795d",
+  "data": {
+    "offset": 190,
+    "limit": 1,
+    "total": 943,
+    "count": 1,
+    "results": [
+      {
+        "id": 21403,
+        "title": "Badlands",
+        "description": "The New Mutants battle the Demon Bear; officer Tom Corsi and nurse Sharon Friedlander are transformed into Indians; Magik defeats the Demon Bear with her Soulsword; Psyche's parents return from the dead, having been freed from the Demon Bear's power.",
+        "resourceURI": "http://gateway.marvel.com/v1/public/stories/21403",
+        "type": "story",
+        "modified": "1969-12-31T19:00:00-0500",
+        "thumbnail": null,
+        "creators": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/stories/21403/creators",
+          "items": [],
+          "returned": 0
+        },
+        "characters": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/stories/21403/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011336",
+              "name": "New Mutants"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009629",
+              "name": "Storm"
+            }
+          ],
+          "returned": 2
+        },
+        "series": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/stories/21403/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2055",
+              "name": "New Mutants (1983 - 1991)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/4603",
+              "name": "New Mutants Classic Vol. 3 (2008)"
+            }
+          ],
+          "returned": 2
+        },
+        "comics": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/stories/21403/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/10356",
+              "name": "New Mutants (1983) #20"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/21081",
+              "name": "New Mutants Classic Vol. 3 (Trade Paperback)"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/stories/21403/events",
+          "items": [],
+          "returned": 0
+        },
+        "originalIssue": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/10356",
+          "name": "New Mutants (1983) #20"
+        }
+      }
+    ]
+  }
+}

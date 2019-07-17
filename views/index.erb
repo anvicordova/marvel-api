@@ -9,14 +9,8 @@
     <div id="stories">
       <h1><%= @story[:character].name %></h1>
       <p><%= @story[:character].description %></p>
-      <ul>
-        <% @story[:stories].each do |story| %>
-          <li>
-            <img src=""><br>
-            <%= story.title %>
-          </li>
-        <% end %>
-      </ul>
+      <h2><%= @story[:story].title %></h2>
+      <p><%= @story[:story].description %></p>
     </div>
     <div id="characters">
       <ul>

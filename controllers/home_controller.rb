@@ -1,12 +1,15 @@
 class HomeController < ApplicationController
   get "/" do
     character = MarvelCharacterService.new.find_by_name("storm")
-    stories = MarvelCharacterService.new.find_stories_for_character(character.id)
-    characters =  MarvelStoryService.new.find_characters_for_story(stories[1].id)
+
+    story = MarvelStoryDecorator.new(
+              MarvelCharacterService.new.pick_random_story_for(character.id, character.number_of_stories)
+            )
+    characters =  MarvelStoryService.new.find_characters_for_story(story.id)
 
     @story = {
       character: character,
-      stories: stories,
+      story: story,
       characters: characters
     }
     erb :index

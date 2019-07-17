@@ -3,7 +3,9 @@ class MarvelCharacterService < MarvelService
     results = fetch("characters", name: name)
     character_hash = results[:data][:results].first
 
-    MarvelCharacter.new(character_hash.slice(:id, :name, :description))
+    character = MarvelCharacter.new(character_hash.slice(:id, :name, :description))
+    character.number_of_stories = character_hash[:stories][:available]
+    character
   end
 
   def find_stories_for_character(character_id)

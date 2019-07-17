@@ -12,10 +12,10 @@
       <div>
         <img src="<%= @story[:character].thumbnail_url%>" />
       </div>
-      <h2><%= @story[:story].title %></h2>
-      <p><%= @story[:story].description %></p>
     </div>
     <div id="characters">
+      <h2><%= @story[:story].title %></h2>
+      <p><%= @story[:story].description %></p>
       <ul>
         <% @story[:characters].each do |character| %>
           <li>
@@ -30,5 +30,4 @@
       </ul>
     </div>
   </body>
-
 </html>

@@ -1,11 +1,12 @@
 class MarvelCharacter
-  attr_accessor :id, :name, :description, :number_of_stories, :thumbnail_url
+  attr_accessor :id, :name, :description, :number_of_stories, :thumbnail
 
-  def initialize(id:, name:, description:)
-    self.id = id
-    self.name = name
-    self.description = description
-    self.number_of_stories = number_of_stories
+  def initialize(attributes)
+    self.id = attributes[:id]
+    self.name = attributes[:name]
+    self.description = attributes[:description]
+    self.number_of_stories = attributes[:stories][:available]
+    self.thumbnail = attributes[:thumbnail]
   end
 
   def ==(o)
@@ -14,5 +15,9 @@ class MarvelCharacter
 
   def state
     [id, name, description, number_of_stories]
+  end
+
+  def thumbnail_url
+    ThumbnailService.new.fetch(thumbnail)
   end
 end

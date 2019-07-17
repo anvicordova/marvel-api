@@ -8,11 +8,12 @@ class MarvelCharacterService < MarvelService
     character
   end
 
-  def find_stories_for_character(character_id)
-    results = fetch("characters/#{character_id}/stories")
+  def pick_random_story_for(character_id, total_stories)
+    story_number = Random.rand(0..total_stories)
 
-    results[:data][:results].map do |story|
-      MarvelStory.new(story.slice(:id, :title))
-    end
+    results = fetch("characters/#{character_id}/stories", offset: story_number, limit: 1)
+    story_hash = results[:data][:results].first
+
+    MarvelStory.new(story_hash.slice(:id, :title, :description))
   end
 end

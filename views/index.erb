@@ -6,14 +6,14 @@
   </head>
 
   <body>
-    <div id="stories">
+    <div id="stories" class="box">
       <h1><%= @story[:character].name %></h1>
       <p><%= @story[:character].description %></p>
       <div>
         <img src="<%= @story[:character].thumbnail_url(Thumbnail::PORTRAIT, Thumbnail::INCREDIBLE) %>" />
       </div>
     </div>
-    <div id="characters">
+    <div id="characters" class="box">
       <h2><%= @story[:story].title %></h2>
       <p><%= @story[:story].description %></p>
       <ul>

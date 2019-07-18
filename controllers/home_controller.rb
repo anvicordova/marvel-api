@@ -9,7 +9,8 @@ class HomeController < ApplicationController
       @story = {
         character: character,
         story: MarvelStoryDecorator.new(story),
-        characters: characters
+        characters: characters,
+        attribution: story.attribution
       }
 
       erb :index

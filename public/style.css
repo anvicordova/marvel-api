@@ -82,3 +82,9 @@ li {
   max-width: 200px;
   vertical-align: top;
 }
+
+.box {
+  margin: 50px auto;
+  max-width: 960px;
+  background: #eee;
+}

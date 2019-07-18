@@ -20,7 +20,7 @@
         <% @story[:characters].each do |character| %>
           <li>
             <div>
-              <%= character.name %>
+              <a href="/?name=<%=character.name%>"><%= character.name %></a>
               <div>
                 <img src="<%= character.thumbnail_url(Thumbnail::STANDARD, Thumbnail::FANTASTIC) %>" />
               </div>

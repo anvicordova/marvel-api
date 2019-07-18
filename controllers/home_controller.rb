@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   get "/" do
-    character = MarvelCharacterService.new.find_by_name("storm")
+    character = MarvelCharacterService.new.find_by_name(params.fetch(:name, "storm"))
 
     story = MarvelStoryDecorator.new(
               MarvelCharacterService.new.pick_random_story_for(character.id, character.number_of_stories)

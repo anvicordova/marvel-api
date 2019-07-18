@@ -1,9 +1,9 @@
 class MarvelStory
   attr_accessor :id, :title, :description
 
-  def initialize(id:, title:, description:)
-    self.id = id
-    self.title = title
-    self.description = description unless description.empty?
+  def initialize(attributes)
+    self.id = attributes[:id]
+    self.title = attributes[:title]
+    self.description = attributes[:description].empty? ? nil : attributes[:description]
   end
 end

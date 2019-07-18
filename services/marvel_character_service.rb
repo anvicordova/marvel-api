@@ -11,6 +11,6 @@ class MarvelCharacterService < MarvelService
     results = fetch("characters/#{character_id}/stories", offset: story_number, limit: 1)
     story_hash = results[:data][:results].first
 
-    MarvelStory.new(story_hash.slice(:id, :title, :description))
+    MarvelStory.new(story_hash)
   end
 end

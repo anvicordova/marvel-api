@@ -9,7 +9,7 @@ class MarvelCharacter
     self.thumbnail = attributes[:thumbnail]
   end
 
-  def thumbnail_url
-    ThumbnailService.new.fetch(thumbnail)
+  def thumbnail_url(variant, size)
+    Thumbnail.fetch(thumbnail, variant, size)
   end
 end

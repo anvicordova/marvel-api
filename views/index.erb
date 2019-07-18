@@ -10,7 +10,7 @@
       <h1><%= @story[:character].name %></h1>
       <p><%= @story[:character].description %></p>
       <div>
-        <img src="<%= @story[:character].thumbnail_url%>" />
+        <img src="<%= @story[:character].thumbnail_url(Thumbnail::PORTRAIT, Thumbnail::INCREDIBLE) %>" />
       </div>
     </div>
     <div id="characters">
@@ -22,7 +22,7 @@
             <div>
               <%= character.name %>
               <div>
-                <img src="<%= character.thumbnail_url%>" />
+                <img src="<%= character.thumbnail_url(Thumbnail::STANDARD, Thumbnail::FANTASTIC) %>" />
               </div>
             </div>
           </li>

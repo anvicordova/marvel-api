@@ -1,8 +1,13 @@
 class MarvelCharacterService < MarvelService
   def find_by_name(name)
     results = fetch("characters", name: name)
-    character_hash = results[:data][:results].first
-    MarvelCharacter.new(character_hash)
+
+    if results[:data][:total] > 0
+      character_hash = results[:data][:results].first
+      MarvelCharacter.new(character_hash)
+    else
+      false
+    end
   end
 
   def pick_random_story_for(character_id, total_stories)

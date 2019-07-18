@@ -31,6 +31,10 @@ p {
   padding: 20px;
 }
 
+.not-found{
+  color: white;
+}
+
 a {
   color: #f0141e;
 }

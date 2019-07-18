@@ -9,14 +9,6 @@ class MarvelCharacter
     self.thumbnail = attributes[:thumbnail]
   end
 
-  def ==(o)
-    o.class == self.class && o.state == state
-  end
-
-  def state
-    [id, name, description, number_of_stories]
-  end
-
   def thumbnail_url
     ThumbnailService.new.fetch(thumbnail)
   end

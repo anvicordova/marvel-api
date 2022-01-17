@@ -1,20 +1,34 @@
-# DEPENDENCIES
+## Dependencies
 Ruby 2.6.3
+Marvel API keys
+  1. Create a Marvel Account in [http://developer.marvel.com/docs]
+  2. Get your key at https://developer.marvel.com/account
 
-# DEVELOPMENT SETUP
-1. Create a Marvel Account in [http://developer.marvel.com/docs]
-2. Get your key at https://developer.marvel.com/account
-3. `cp .env.example .env`
-4.  Add your public and private keys in the `.env` file
-5. `gem install bundler`
-6. `bundle install`
-7. In your terminal run `rerun 'rackup -p  4567'`
-8. In your browser, go to `http://localhost:4567`
 
-You can click in each of the names of the characters displayed to get a whole
-new page or refresh the current one to get a new story and their characters.
+## Development setup
 
-You can also use the URL to find new stuff ex: `http://localhost:4567/?name=Banshee`
+### With Docker
 
-# TESTING
+1. Copy environment variables
+
+```
+  cp .env.example .env
+```
+
+2. Add your private and public keys to the `.env` file
+
+3. Run `docker-compose up`
+
+4. In your browser, go to `http://localhost:4567`
+
+### Full setup
+
+1. `cp .env.example .env`
+2.  Add your public and private keys in the `.env` file
+3. `gem install bundler`
+4. `bundle install`
+5. In your terminal run `rerun 'rackup -p  4567'`
+5. In your browser, go to `http://localhost:4567`
+
+## Testing
 1. In your terminal run `rspec` in the main folder.

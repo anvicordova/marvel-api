@@ -7,7 +7,7 @@ module Marvel
   class BaseService
     def fetch(endpoint, params = {})
       uri = URI.parse("#{ENV["MARVEL_URL"]}/#{endpoint}")
-      uri.query = URI.encode_www_form(query_params.merge(params))
+      uri.query = URI.encode_www_form(auth_params.merge(params))
 
       JSON.parse(
         Net::HTTP.get_response(uri).body,
@@ -17,7 +17,7 @@ module Marvel
 
     private
 
-    def query_params
+    def auth_params
       timestamp = Time.now.utc.strftime("%Y%m%d%H%M%S")
 
       {

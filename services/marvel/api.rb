@@ -1,18 +1,23 @@
-require "uri"
-require "digest"
-require "json"
-require "net/http"
+require "faraday"
 
 module Marvel
   class Api
-    def fetch(endpoint, params = {})
-      uri = URI.parse("#{ENV["MARVEL_URL"]}/#{endpoint}")
-      uri.query = URI.encode_www_form(auth_params.merge(params))
-
-      JSON.parse(
-        Net::HTTP.get_response(uri).body,
-        symbolize_names: true
+    def initialize
+      @connection = Faraday.new(
+        url: ENV["MARVEL_URL"],
+        params: auth_params,
+        headers: {'Content-Type' => 'application/json'}
       )
+    end
+
+    def fetch(endpoint, params = {})
+      response = @connection.get(endpoint, params)
+      
+      if response.success?
+        JSON.parse(response.body, symbolize_names: true)
+      else
+        {}
+      end
     end
 
     private

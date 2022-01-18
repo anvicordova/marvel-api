@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "dotenv"
 gem "sinatra"
 gem "puma"
+gem "faraday"
 
 group :development, :test do
   gem 'pry-byebug'

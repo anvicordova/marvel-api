@@ -1,7 +1,11 @@
 module Marvel
-  class StoryService < BaseService
+  class StoryService
+    def initialize
+      @marvel_api = Marvel::Api.new
+    end
+
     def find_characters_for_story(story_id)
-      results = fetch("stories/#{story_id}/characters")
+      results = @marvel_api.fetch("stories/#{story_id}/characters")
 
       results[:data][:results].map do |character_hash|
         Marvel::Character.new(character_hash, results[:attributionText])

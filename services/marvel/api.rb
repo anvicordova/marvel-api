@@ -4,7 +4,7 @@ require "json"
 require "net/http"
 
 module Marvel
-  class BaseService
+  class Api
     def fetch(endpoint, params = {})
       uri = URI.parse("#{ENV["MARVEL_URL"]}/#{endpoint}")
       uri.query = URI.encode_www_form(auth_params.merge(params))

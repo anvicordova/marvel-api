@@ -4,7 +4,7 @@ describe Marvel::CharacterService do
   describe "#find_by_name" do
     it "returns the first MarvelCharacter it finds with the given name" do
       subject = Marvel::CharacterService.new.find_by_name("storm")
-      expect(subject).to be_a(MarvelCharacter)
+      expect(subject).to be_a(Marvel::Character)
     end
 
     it "returns the basic information of the given character" do
@@ -19,7 +19,7 @@ describe Marvel::CharacterService do
   describe "#pick_random_story_for" do
     it "returns a MarvelStory" do
       subject = Marvel::CharacterService.new.pick_random_story_for(1009629, 950)
-      expect(subject).to be_a(MarvelStory)
+      expect(subject).to be_a(Marvel::Story)
     end
 
     it "returns the basic information of the given story" do

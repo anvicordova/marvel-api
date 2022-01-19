@@ -15,9 +15,11 @@ describe Marvel::StoryService do
     end
 
     it "returns the basic information of the given story" do
-      expect(subject.id).to eq(21403)
-      expect(subject.title).to eq("Badlands")
-      expect(subject.description).to eq("The New Mutants battle the Demon Bear; officer Tom Corsi and nurse Sharon Friedlander are transformed into Indians; Magik defeats the Demon Bear with her Soulsword; Psyche's parents return from the dead, having been freed from the Demon Bear's power.")
+      aggregate_failures do
+        expect(subject.id).to eq(21403)
+        expect(subject.title).to eq("Badlands")
+        expect(subject.description).to eq("The New Mutants battle the Demon Bear; officer Tom Corsi and nurse Sharon Friedlander are transformed into Indians; Magik defeats the Demon Bear with her Soulsword; Psyche's parents return from the dead, having been freed from the Demon Bear's power.")
+      end
     end
   end
 end

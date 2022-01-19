@@ -11,7 +11,7 @@ module Marvel
         character = response.data[:results].first
         Marvel::Character.new(character, response.attribution)
       else
-        false
+        nil
       end
     end
 

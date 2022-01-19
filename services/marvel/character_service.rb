@@ -5,11 +5,11 @@ module Marvel
     end
 
     def find_by_name(name)
-      results = @marvel_api.fetch("characters", name: name)
+      response = @marvel_api.fetch("characters", name: name)
 
-      if results[:data][:total] > 0
-        character_hash = results[:data][:results].first
-        Marvel::Character.new(character_hash, results[:attributionText])
+      if response.success? &&  response.data[:total] > 0
+        character = response.data[:results].first
+        Marvel::Character.new(character, response.attribution)
       else
         false
       end
@@ -18,10 +18,14 @@ module Marvel
     def pick_random_story_for(character_id, total_stories)
       story_number = Random.rand(0..total_stories)
 
-      results = @marvel_api.fetch("characters/#{character_id}/stories", offset: story_number, limit: 1)
-      story_hash = results[:data][:results].first
+      response = @marvel_api.fetch("characters/#{character_id}/stories", offset: story_number, limit: 1)
 
-      Marvel::Story.new(story_hash, results[:attributionText])
+      if response.success?
+        story_hash = response.data[:results].first
+        Marvel::Story.new(story_hash, response.attribution)
+      else
+        nil
+      end
     end
   end
 end

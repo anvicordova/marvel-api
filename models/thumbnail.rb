@@ -1,4 +1,11 @@
 class Thumbnail
+  TYPES = {
+    portrait: "portrait",
+    standard: "standard",
+    fantastic: "fantastic",
+    incredible: "incredible",
+  }.freeze
+  
   PORTRAIT = "portrait".freeze
   STANDARD = "standard".freeze
 

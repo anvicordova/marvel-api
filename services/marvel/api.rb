@@ -1,4 +1,5 @@
 require "faraday"
+require "ostruct"
 
 module Marvel
   class Api
@@ -12,11 +13,27 @@ module Marvel
 
     def fetch(endpoint, params = {})
       response = @connection.get(endpoint, params)
-      
+      body = JSON.parse(response.body, symbolize_names: true)
+
       if response.success?
-        JSON.parse(response.body, symbolize_names: true)
+        OpenStruct.new(
+          status:  :success,
+          success?: true,
+          failure?: false,
+          data: body[:data],
+          attribution: {
+            copyright: body[:copyright],
+            text: body[:attributionText]
+          }
+        )
       else
-        {}
+        # Call debugger
+        OpenStruct.new(
+          status: :failure,
+          success?: false,
+          failure?: true,
+          data: body[:data]
+        )
       end
     end
 

@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
     if character
       story = Marvel::StoryService.new.find_story_by(character: character)
-      characters =  Marvel::StoryService.new.find_characters_for_story(story.id)
+      characters =  story ? Marvel::CharacterService.new.find_characters_by(story: story) : []
 
       @story = {
         character: character,

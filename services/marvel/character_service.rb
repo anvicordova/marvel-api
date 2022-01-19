@@ -14,5 +14,17 @@ module Marvel
         false
       end
     end
+
+    def find_characters_by(story:)
+      response = @marvel_api.fetch("stories/#{story.id}/characters")
+
+      if response.success?
+        response.data[:results].map do |character|
+          Marvel::Character.new(character, response.attribution)
+        end
+      else
+        []
+      end
+    end
   end
 end

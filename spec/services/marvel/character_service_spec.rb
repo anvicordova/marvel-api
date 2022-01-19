@@ -15,4 +15,23 @@ describe Marvel::CharacterService do
       expect(subject.number_of_stories).to eq(950)
     end
   end
+
+  describe "#find_characters_by" do
+    subject do
+      Marvel::CharacterService.new.find_characters_by(story: story)
+    end
+
+    let(:story) { OpenStruct.new(id: 21403) }
+
+    it "returns an array with the number of characters of the story" do
+      expect(subject.size).to be 2
+    end
+
+    it "returns an array with the characters of the story" do
+      expect(subject.first.id).to be 1011336
+      expect(subject.first.name).to eq "New Mutants"
+      expect(subject.last.id).to be 1009629
+      expect(subject.last.name).to eq "Storm"
+    end
+  end
 end

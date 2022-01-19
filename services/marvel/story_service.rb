@@ -5,7 +5,7 @@ module Marvel
     end
 
     def find_story_by(character:)
-      offset = Random.rand(0..character.number_of_stories)
+      offset = Random.rand(0...character.number_of_stories)
 
       response = @marvel_api.fetch("characters/#{character.id}/stories", offset: offset, limit: 1)
 

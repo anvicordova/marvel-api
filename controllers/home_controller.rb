@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
       @story = {
         character: character,
-        story: MarvelStoryDecorator.new(story),
+        story: story ? MarvelStoryDecorator.new(story): {},
         characters: characters,
         attribution: story ? story.attribution : character.attribution
       }

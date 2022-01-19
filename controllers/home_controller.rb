@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     character = Marvel::CharacterService.new.find_by_name(params.fetch(:name, "storm"))
 
     if character
-      story = Marvel::CharacterService.new.pick_random_story_for(character.id, character.number_of_stories)
+      story = Marvel::StoryService.new.find_story_by(character: character)
       characters =  Marvel::StoryService.new.find_characters_for_story(story.id)
 
       @story = {

@@ -14,18 +14,5 @@ module Marvel
         false
       end
     end
-
-    def pick_random_story_for(character_id, total_stories)
-      story_number = Random.rand(0..total_stories)
-
-      response = @marvel_api.fetch("characters/#{character_id}/stories", offset: story_number, limit: 1)
-
-      if response.success?
-        story_hash = response.data[:results].first
-        Marvel::Story.new(story_hash, response.attribution)
-      else
-        nil
-      end
-    end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Marvel
   class Story
     attr_accessor :id, :title, :description, :attribution

@@ -1,13 +1,15 @@
-require "faraday"
-require "ostruct"
+# frozen_string_literal: true
+
+require 'faraday'
+require 'ostruct'
 
 module Marvel
   class Api
     def initialize
       @connection = Faraday.new(
-        url: ENV["MARVEL_URL"],
+        url: ENV['MARVEL_URL'],
         params: auth_params,
-        headers: {'Content-Type' => 'application/json'}
+        headers: { 'Content-Type' => 'application/json' }
       )
     end
 
@@ -17,7 +19,7 @@ module Marvel
 
       if response.success?
         OpenStruct.new(
-          status:  :success,
+          status: :success,
           success?: true,
           failure?: false,
           data: body[:data],
@@ -40,17 +42,17 @@ module Marvel
     private
 
     def auth_params
-      timestamp = Time.now.utc.strftime("%Y%m%d%H%M%S")
+      timestamp = Time.now.utc.strftime('%Y%m%d%H%M%S')
 
       {
         ts: timestamp,
-        apikey: ENV["MARVEL_PUBLIC_KEY"],
+        apikey: ENV['MARVEL_PUBLIC_KEY'],
         hash: generate_hash(timestamp)
       }
     end
 
     def generate_hash(timestamp)
-      Digest::MD5.hexdigest(timestamp + ENV["MARVEL_PRIVATE_KEY"] + ENV["MARVEL_PUBLIC_KEY"])
+      Digest::MD5.hexdigest(timestamp + ENV['MARVEL_PRIVATE_KEY'] + ENV['MARVEL_PUBLIC_KEY'])
     end
   end
 end

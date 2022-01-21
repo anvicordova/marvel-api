@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Marvel
   class CharacterService
     def initialize
@@ -5,14 +7,12 @@ module Marvel
     end
 
     def find_by_name(name)
-      response = @marvel_api.fetch("characters", name: name)
+      response = @marvel_api.fetch('characters', name: name)
 
-      if response.success? &&  response.data[:total] > 0
-        character = response.data[:results].first
-        Marvel::Character.new(character, response.attribution)
-      else
-        nil
-      end
+      return unless response.success? && response.data[:total].positive?
+
+      character = response.data[:results].first
+      Marvel::Character.new(character, response.attribution)
     end
 
     def find_characters_by(story:)

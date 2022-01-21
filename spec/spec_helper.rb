@@ -1,15 +1,17 @@
-require "rack/test"
-require "rspec"
-require "webmock/rspec"
+# frozen_string_literal: true
 
-ENV["RACK_ENV"] = "test"
+require 'rack/test'
+require 'rspec'
+require 'webmock/rspec'
 
-require File.expand_path(File.join("config", "application"))
-require_relative "support/fake_marvel"
+ENV['RACK_ENV'] = 'test'
+
+require File.expand_path(File.join('config', 'application'))
+require_relative 'support/fake_marvel'
 
 module RSpecMixin
   include Rack::Test::Methods
-  def app() described_class end
+  def app() = described_class
 end
 
 WebMock.disable_net_connect!(allow_localhost: true)

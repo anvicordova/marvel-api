@@ -1,17 +1,23 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem "dotenv"
-gem "sinatra"
-gem "puma"
-gem "faraday"
+source 'https://rubygems.org'
+
+gem 'dotenv'
+gem 'faraday'
+gem 'puma'
+gem 'sinatra'
 
 group :development, :test do
   gem 'pry-byebug'
 end
 
+group :development do
+  gem 'rubocop'
+end
+
 group :test do
-  gem "rack-test"
-  gem "rspec"
-  gem "webmock"
-  gem "rerun"
+  gem 'rack-test'
+  gem 'rerun'
+  gem 'rspec'
+  gem 'webmock'
 end

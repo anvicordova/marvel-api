@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Marvel
   class Character
     attr_accessor :id, :name, :description, :number_of_stories, :thumbnail, :attribution

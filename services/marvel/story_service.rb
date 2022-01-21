@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Marvel
   class StoryService
     def initialize
@@ -9,12 +11,10 @@ module Marvel
 
       response = @marvel_api.fetch("characters/#{character.id}/stories", offset: offset, limit: 1)
 
-      if response.success?
-        story_hash = response.data[:results].first
-        Marvel::Story.new(story_hash, response.attribution)
-      else
-        nil
-      end
+      return unless response.success?
+
+      story_hash = response.data[:results].first
+      Marvel::Story.new(story_hash, response.attribution)
     end
   end
 end

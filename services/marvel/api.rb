@@ -17,25 +17,13 @@ module Marvel
       response = @connection.get(endpoint, params)
       body = JSON.parse(response.body, symbolize_names: true)
 
+      body[:data][:attribution] = { copyright: body[:copyright], text: body[:attributionText] }
+
       if response.success?
-        OpenStruct.new(
-          status: :success,
-          success?: true,
-          failure?: false,
-          data: body[:data],
-          attribution: {
-            copyright: body[:copyright],
-            text: body[:attributionText]
-          }
-        )
+        Success.new(data: body[:data])
       else
         # Call debugger
-        OpenStruct.new(
-          status: :failure,
-          success?: false,
-          failure?: true,
-          data: body[:data]
-        )
+        Failure.new(data: body[:data])
       end
     end
 

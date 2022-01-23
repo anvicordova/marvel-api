@@ -8,11 +8,10 @@ module Marvel
 
     def find_by_name(name)
       response = @marvel_api.fetch('characters', name: name)
-
       return unless response.success? && response.data[:total].positive?
 
       character = response.data[:results].first
-      Marvel::Character.new(character, response.attribution)
+      Marvel::Character.new(character, response.data[:attribution])
     end
 
     def find_characters_by(story:)
@@ -20,7 +19,7 @@ module Marvel
 
       if response.success?
         response.data[:results].map do |character|
-          Marvel::Character.new(character, response.attribution)
+          Marvel::Character.new(character, response.data[:attribution])
         end
       else
         []

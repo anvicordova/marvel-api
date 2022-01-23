@@ -14,7 +14,7 @@ module Marvel
       return unless response.success?
 
       story_hash = response.data[:results].first
-      Marvel::Story.new(story_hash, response.attribution)
+      Marvel::Story.new(story_hash, response.data[:attribution])
     end
   end
 end

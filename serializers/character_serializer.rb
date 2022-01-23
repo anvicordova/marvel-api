@@ -4,7 +4,7 @@ module Serializers
   class CharacterSerializer
     include ::FastJsonapi::ObjectSerializer
 
-    attributes :name, :description
+    attributes :id, :name, :description
 
     attributes :thumbnail_url do |character, params|
       character.thumbnail_url(params[:thumbnail_variant], params[:thumbnail_size])

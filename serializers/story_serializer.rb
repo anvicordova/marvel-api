@@ -4,6 +4,6 @@ module Serializers
   class StorySerializer
     include ::FastJsonapi::ObjectSerializer
 
-    attributes :title, :description
+    attributes :id, :title, :description
   end
 end

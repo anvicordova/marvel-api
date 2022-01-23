@@ -3,4 +3,16 @@
 class ApplicationController < Sinatra::Base
   set :views, File.expand_path('../views', __dir__)
   set :public_folder, 'public'
+
+  before do
+    headers['Access-Control-Allow-Methods'] = 'GET'
+    headers['Access-Control-Allow-Origin'] = '*'
+    headers['Access-Control-Allow-Headers'] = 'accept, authorization, origin'
+  end
+
+  options '*' do
+    response.headers['Allow'] = 'GET'
+    response.headers['Access-Control-Allow-Headers'] =
+      'X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept'
+  end
 end

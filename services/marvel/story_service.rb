@@ -6,15 +6,14 @@ module Marvel
       @marvel_api = Marvel::Api.new
     end
 
-    def find_story_by(character:)
-      offset = Random.rand(0...character.number_of_stories)
-
-      response = @marvel_api.fetch("characters/#{character.id}/stories", offset: offset, limit: 1)
+    def find_stories_by(character_id:)
+      response = @marvel_api.fetch("characters/#{character_id}/stories", offset: 0, limit: 10)
 
       return unless response.success?
 
-      story_hash = response.data[:results].first
-      Marvel::Story.new(story_hash, response.data[:attribution])
+      response.data[:results].map do |story|
+        Marvel::Story.new(story, response.data[:attribution])
+      end
     end
   end
 end

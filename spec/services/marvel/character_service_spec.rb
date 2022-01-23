@@ -25,10 +25,10 @@ describe Marvel::CharacterService do
 
   describe '#find_characters_by' do
     subject do
-      Marvel::CharacterService.new.find_characters_by(story: story)
+      Marvel::CharacterService.new.find_characters_by(story_id: story_id)
     end
 
-    let(:story) { OpenStruct.new(id: 21_403) }
+    let(:story_id) { 21_403 }
 
     it 'returns an array with the number of characters of the story' do
       expect(subject.size).to be 2

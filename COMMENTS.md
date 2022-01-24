@@ -1,43 +1,44 @@
 # About the Solution
 
-I used Sinatra and the MVC architecture for the app, I took this decision because
-the app was an MVP, and I didn't want to over complicate the code.
+- I decided to create an app based on server-client API 
+- Using Sinatra to avoid boiler plate code of other frameworks
+- Using react to render data easily
+- I had in mind that would be better to have 2 separated projects but in the same repo, some reasons:
+  - Unified versioning, one source of truth
+  - Extensive code sharing and reuse
+  - Simplified dependency management
+  - Atomic changes
+  - Collaboration across teams
 
-One of the main classes is `MarvelService`, this class is used to fetch the information
-from the MarvelAPI, it uses the ruby standard library to fetch the response body and parses it
-into JSON. It also has some helpful methods that allow authentication.
+Backend:
+- I'm using pretty much standard Sinatra config, API with all endpoints in one controller(because it's a small app)
+- I'm serializing my response, to have it consumed by the client easily
+- I'm returning, in the mentioned response, models created by me to:
+  - Add some extra functionality(e.g. thumbnails)
+  - Possibly have it cached on my server(if allowed, or temporary cache)
+  - Throw my own statuses(e.g. Marvel doesn't throw 204 or 404 when a search was empty)
+- For the services
+  - Using a Marvel::Api to create requests to Marvel API
+  - Using Faraday because:
+    - It's reliable
+    - I can change the adapter(I'm using the default: Net::HTTP)
+    - Great middleware, to allow catch and log server errors on Marvel API(including timeouts)
 
-The classes `MarvelCharacterService` and `MarvelStoryService` inherit from `MarvelService` and
-have the purpose of retrieving more friendly data by into `MarvelCharacter` or `MarvelStory` models.
+Testing:
+  - I added some tests using rspec
+  - I mocked the calls to the Marvel API and added some fixture
 
-For testing, I used `rspec` and `webmock` to stub the requests to the API and avoid
-making calls to it in the test environment. For this reason, the class `FakeMarvel` was created,
-it receives the stubbed requests from testing and returns seed data under `rspec/support/fixtures`
+Frontend:
+  - Using react and axios
+  - Using react hooks to handle states
+  - Using axios to fetch the data from endpoints
 
-# Challenges and Opportunities to improve
-
-1. I think there's room for improvement regarding the sync calls that are performed. I think now it
-works well because the app is relatively small, but if we would like to fetch more information like
-comics and their thumbnails there could be some performance issues.
-
-My thought is that maybe a queue can be implemented to perform the requests and once the job is done
-we can display the information as soon as it is available.(observer pattern maybe)
-
-Another performance issue, is that currently the same character is fetched twice, so I think some
-caching would be helpful(this of course might require a db or redis at least).
-
-2. Testing was also a bit challenging here, although the solution works well, it has the
-downside that we have some fixed json that is not synced up with the real API, so if that one changes
-and there's no update from our side, there could be false positives.
-
-Also, I think for better coverage, more negative cases should be written. It might be necessary to
-evaluate if `FakeMarvel` help us with this purpose or if it's better to stub the request in each
-test and select and appropriate response there.
-
-3. Something missing is the handle of API errors, this is something I think that should be handled
-by the `MarvelService` before parsing the result to JSON.
-So if we get a 4XX, 3XX or 5XX statuses, an exception could be triggered and the app could respond with an appropriate view.
-
----
-
-That's all. I enjoyed this challenge a lot :)
+Improvements:
+  Some things I have in mind that may need a little more of time:
+  - Caching response from Marvel's API(using redis in case it's protected content)
+  - Caching request to my API using sinatra cache(POC on branch cache)
+  - Using JWT on my endpoints to validate request
+  - Create login/user limit to avoid abuse of my endpoints
+  - Handling pagination on frontend(e.g. stories currently showing only the first 10)
+  - Testing in frontend(with react-testing-library)
+  - If the app would need it, create separate components for react

@@ -19,7 +19,9 @@ Marvel API keys
 
 3. Run `docker-compose up`
 
-4. In your browser, go to `http://localhost:4567`
+4. In your browser, go to `http://localhost:3000`
+
+5. Try to look for a Marvel Character. Ex: Storm
 
 ### Full setup
 

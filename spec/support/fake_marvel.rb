@@ -4,15 +4,27 @@ require 'sinatra/base'
 
 class FakeMarvel < Sinatra::Base
   get '/v1/public/characters' do
-    json_response 200, 'characters.json'
+    if params[:name] == "error"
+      json_response 200, 'character_error.json'
+    else
+      json_response 200, 'characters.json'
+    end
   end
 
-  get '/v1/public/characters/:character_id/stories' do
-    json_response 200, 'character_stories.json'
+  get '/v1/public/characters/:character_id/stories' do |character_id|
+    if character_id == "error"
+      json_response 200, 'character_stories_error.json'
+    else
+      json_response 200, 'character_stories.json'
+    end
   end
 
-  get '/v1/public/stories/:story_id/characters' do
-    json_response 200, 'story_characters.json'
+  get '/v1/public/stories/:story_id/characters' do |story_id|
+    if story_id == "error"
+      json_response 200, 'character_stories_error.json'
+    else
+      json_response 200, 'story_characters.json'
+    end
   end
 
   def json_response(response_code, file_name)

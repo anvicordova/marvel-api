@@ -17,9 +17,8 @@ module Marvel
       response = @connection.get(endpoint, params)
       body = JSON.parse(response.body, symbolize_names: true)
 
-      body[:data][:attribution] = { copyright: body[:copyright], text: body[:attributionText] }
-
       if response.success?
+        body[:data][:attribution] = { copyright: body[:copyright], text: body[:attributionText] }
         Success.new(data: body[:data])
       else
         # Call debugger
